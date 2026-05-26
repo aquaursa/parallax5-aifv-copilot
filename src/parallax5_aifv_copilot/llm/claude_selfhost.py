@@ -18,7 +18,6 @@ The disclosure is the honesty.
 from __future__ import annotations
 
 import json
-import time
 from pathlib import Path
 
 from .base import LLMResponse, hash_text
