@@ -12,7 +12,7 @@ from typing import Any
 
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from .base import LLMClient, LLMResponse, hash_text
+from .base import LLMResponse, hash_text
 
 _DEFAULT_MODEL = "claude-opus-4-7"
 

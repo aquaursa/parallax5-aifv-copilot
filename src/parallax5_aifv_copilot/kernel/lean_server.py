@@ -78,7 +78,7 @@ class LeanServer:
 
     # ── lifecycle ──────────────────────────────────────────────────────
 
-    def __enter__(self) -> "LeanServer":
+    def __enter__(self) -> LeanServer:
         self.start()
         return self
 

@@ -11,15 +11,14 @@ accepts under the four-condition gate.
 from __future__ import annotations
 
 import json
-import time
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Iterable
 
 from ..kernel import AcceptanceVerdict, LeanServer
-from ..llm import LLMClient, LLMResponse, Provider
-from ..pipelines import ProofDraft, SpecDraft, draft_proof, draft_spec
+from ..llm import LLMClient, Provider
+from ..pipelines import draft_proof, draft_spec
 
 
 @dataclass(frozen=True, slots=True)
@@ -76,7 +75,7 @@ def _run_one_attempt(
     work_dir: Path,
     lean_server: LeanServer,
 ) -> AttemptRecord:
-    ts = datetime.now(timezone.utc).isoformat()
+    ts = datetime.now(UTC).isoformat()
 
     # Step 1: spec drafting
     spec = draft_spec(
@@ -186,7 +185,7 @@ def run_benchmark(
     Returns the run directory containing per-attempt JSON records plus
     a `summary.json` aggregate.
     """
-    run_id = datetime.now(timezone.utc).strftime("run_%Y%m%dT%H%M%SZ")
+    run_id = datetime.now(UTC).strftime("run_%Y%m%dT%H%M%SZ")
     run_dir = output_dir / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
     (run_dir / "attempts").mkdir(exist_ok=True)
@@ -240,5 +239,5 @@ def _summarize(records: list[AttemptRecord]) -> dict[str, object]:
         "accepted": accepted,
         "acceptance_rate": (accepted / n) if n else 0.0,
         "by_provider_pair": by_pair,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
     }
