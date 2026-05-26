@@ -1,0 +1,3 @@
+-- Root module for parallax5-aifv-verification.
+-- LLM-produced files go under Copilot/ and are verified individually
+-- via `lean --server` in the AI-FV Co-Pilot pipeline.

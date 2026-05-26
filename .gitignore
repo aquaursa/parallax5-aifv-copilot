@@ -44,3 +44,7 @@ results/cache/
 
 # Local mounts
 /tmp/
+
+# Verification project: rebuilt fresh on each benchmark run
+verification_project/.lake/
+verification_project/Copilot/Attempt*.lean

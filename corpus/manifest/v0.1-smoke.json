@@ -1,0 +1,14 @@
+{
+  "version": "0.1-smoke",
+  "frozen_at": "2026-05-26",
+  "contracts": [
+    {
+      "contract_id": "patched_vault_4626",
+      "source_path": "corpus/contracts/patched_vault_4626/source.sol",
+      "purpose": "ERC-4626 vault with virtual-shares mitigation against the first-depositor inflation attack.",
+      "expected_obligations": ["A1"],
+      "provenance": "PARALLAX-5 demos/vault/contracts/PatchedVault.sol (commit e9ac9f27)",
+      "notes": "Substrate demo 1. Should be straightforward for LLMs since the substrate's own Conservation.lean is the canonical reference proof."
+    }
+  ]
+}

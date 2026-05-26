@@ -1,0 +1,5 @@
+name = "parallax5-aifv-verification"
+defaultTargets = ["Copilot"]
+
+[[lean_lib]]
+name = "Copilot"

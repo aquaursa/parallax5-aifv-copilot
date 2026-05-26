@@ -59,13 +59,10 @@ def draft_proof(
     if proof is None:
         return None
 
-    # Wrap in a complete Lean 4 file. The substrate is imported via
-    # `import PARALLAX5` which the project's lakefile arranges.
-    file_content = (
-        "import PARALLAX5\n\n"
-        "open PARALLAX5\n\n"
-        f"{proof}\n"
-    )
+    # The LLM produces a self-contained Lean 4 file matching the
+    # demo-style pattern (own namespace, own state, own obligations).
+    # The substrate is consulted as a pattern reference, not imported.
+    file_content = proof.strip() + "\n"
     return ProofDraft(
         contract_id=contract_id,
         statement_provider=statement_provider,
