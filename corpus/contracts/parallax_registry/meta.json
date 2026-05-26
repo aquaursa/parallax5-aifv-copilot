@@ -1,0 +1,11 @@
+{
+  "contract_id": "parallax_registry",
+  "tier": "B-substrate",
+  "purpose": "PARALLAX-5 certificate registry; state-machine contract",
+  "expected_obligations": [
+    "A2",
+    "A4"
+  ],
+  "role": "hardened",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/registry/src/ParallaxRegistry.sol"
+}

@@ -1,0 +1,12 @@
+{
+  "contract_id": "compound_v3_usdc_comet",
+  "tier": "D-etherscan",
+  "purpose": "Compound III (Comet) USDC market: unified supply/borrow.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0xc3d688B66703497DAA19211EEdff47f25384cdc3#code",
+  "address": "0xc3d688B66703497DAA19211EEdff47f25384cdc3"
+}

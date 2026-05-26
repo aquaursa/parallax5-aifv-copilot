@@ -1,0 +1,12 @@
+{
+  "contract_id": "aave_v3_pool",
+  "tier": "D-etherscan",
+  "purpose": "Aave V3 Pool: lending core; supply/borrow/liquidation entrypoint.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2#code",
+  "address": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
+}

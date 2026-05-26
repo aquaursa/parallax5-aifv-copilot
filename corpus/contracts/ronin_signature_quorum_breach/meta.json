@@ -1,0 +1,11 @@
+{
+  "contract_id": "ronin_signature_quorum_breach",
+  "tier": "C-catalog",
+  "purpose": "Ronin archetype: validator quorum below required threshold.",
+  "expected_obligations": [
+    "A2",
+    "A3"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

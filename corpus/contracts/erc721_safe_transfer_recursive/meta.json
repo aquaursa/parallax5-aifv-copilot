@@ -1,0 +1,10 @@
+{
+  "contract_id": "erc721_safe_transfer_recursive",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "ERC-721 safeTransferFrom callback re-entered into transfer.",
+  "expected_obligations": [
+    "A4"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

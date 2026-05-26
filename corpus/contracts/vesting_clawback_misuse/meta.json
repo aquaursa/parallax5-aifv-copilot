@@ -1,0 +1,10 @@
+{
+  "contract_id": "vesting_clawback_misuse",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "Vesting with unauthorized clawback path.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

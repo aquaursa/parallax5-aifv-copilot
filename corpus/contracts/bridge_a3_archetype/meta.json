@@ -1,0 +1,10 @@
+{
+  "contract_id": "bridge_a3_archetype",
+  "tier": "B-substrate",
+  "purpose": "Bridge archetype: signature integrity surface",
+  "expected_obligations": [
+    "A3"
+  ],
+  "role": "exemplar",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/Bridge.sol"
+}

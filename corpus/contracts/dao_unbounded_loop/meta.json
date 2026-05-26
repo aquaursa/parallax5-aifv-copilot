@@ -1,0 +1,11 @@
+{
+  "contract_id": "dao_unbounded_loop",
+  "tier": "C-catalog",
+  "purpose": "DAO archetype: unbounded for-loop over user list.",
+  "expected_obligations": [
+    "A2",
+    "A4"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

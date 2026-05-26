@@ -1,0 +1,10 @@
+{
+  "contract_id": "erc20_pull_no_approve_check",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "ERC-20 transferFrom missing allowance check.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

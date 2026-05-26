@@ -1,0 +1,10 @@
+{
+  "contract_id": "staking_inflation_via_donation",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "Staking pool vulnerable to donation-based share inflation.",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

@@ -1,0 +1,10 @@
+{
+  "contract_id": "a2_role_based",
+  "tier": "A-synthetic",
+  "purpose": "Role-based access control over multiple methods.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "hardened",
+  "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)"
+}

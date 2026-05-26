@@ -1,0 +1,10 @@
+{
+  "contract_id": "dForce_oracle_circular",
+  "tier": "C-catalog",
+  "purpose": "dForce archetype: circular price oracle dependency.",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

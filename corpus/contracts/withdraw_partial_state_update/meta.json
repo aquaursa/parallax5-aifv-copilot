@@ -1,0 +1,11 @@
+{
+  "contract_id": "withdraw_partial_state_update",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "Partial state update on withdraw leaves stale fields.",
+  "expected_obligations": [
+    "A1",
+    "A4"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

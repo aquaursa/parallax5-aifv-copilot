@@ -1,0 +1,11 @@
+{
+  "contract_id": "chainlink_feed_registry",
+  "tier": "D-etherscan",
+  "purpose": "Chainlink FeedRegistry: discovery for aggregator feeds.",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x47Fb2585D2C56Fe188D0E6ec628a38b74fCeeeDf#code",
+  "address": "0x47Fb2585D2C56Fe188D0E6ec628a38b74fCeeeDf"
+}

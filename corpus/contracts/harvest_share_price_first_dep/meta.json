@@ -1,0 +1,10 @@
+{
+  "contract_id": "harvest_share_price_first_dep",
+  "tier": "C-catalog",
+  "purpose": "Harvest archetype: first depositor mints arbitrary shares.",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

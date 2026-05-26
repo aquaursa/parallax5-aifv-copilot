@@ -1,0 +1,10 @@
+{
+  "contract_id": "cream_vulnerable",
+  "tier": "B-substrate",
+  "purpose": "Cream-Harvest archetype: first-depositor vulnerability",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "vulnerable",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/CreamVuln.sol"
+}

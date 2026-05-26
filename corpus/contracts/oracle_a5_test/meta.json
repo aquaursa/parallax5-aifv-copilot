@@ -1,0 +1,10 @@
+{
+  "contract_id": "oracle_a5_test",
+  "tier": "B-substrate",
+  "purpose": "Halmos test contract for the A5 oracle-trust archetype",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "test",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/OracleA5.t.sol"
+}

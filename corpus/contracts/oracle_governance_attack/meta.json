@@ -1,0 +1,11 @@
+{
+  "contract_id": "oracle_governance_attack",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "Oracle parameter set without timelock or quorum.",
+  "expected_obligations": [
+    "A2",
+    "A5"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

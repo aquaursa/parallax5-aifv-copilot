@@ -1,0 +1,10 @@
+{
+  "contract_id": "multichain_unconstrained_admin",
+  "tier": "C-catalog",
+  "purpose": "Multichain archetype: privileged operator can withdraw any token.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

@@ -1,0 +1,10 @@
+{
+  "contract_id": "solv_a4_test",
+  "tier": "B-substrate",
+  "purpose": "Halmos test contract for the A4 temporal-distinctness archetype",
+  "expected_obligations": [
+    "A4"
+  ],
+  "role": "test",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/SolvA4.t.sol"
+}

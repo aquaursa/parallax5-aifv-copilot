@@ -1,0 +1,11 @@
+{
+  "contract_id": "bridge_quorum_attestation",
+  "tier": "B-substrate",
+  "purpose": "Multi-attestor quorum bridge case study",
+  "expected_obligations": [
+    "A3",
+    "A5"
+  ],
+  "role": "case_study",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/case_studies/bridge_attestation/contracts/BridgeQuorum.t.sol"
+}

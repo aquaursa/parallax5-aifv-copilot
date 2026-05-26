@@ -1,0 +1,10 @@
+{
+  "contract_id": "flashloan_cumulative_balance",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "Cumulative balance used as price; flash-loan manipulable.",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

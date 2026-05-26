@@ -1,0 +1,1048 @@
+{
+  "version": "0.1",
+  "frozen_at": "2026-05-26",
+  "description": "PARALLAX-5 AI-FV Co-Pilot v0.1 benchmark corpus. 100 Solidity contracts spanning five tiers: synthetic obligation exemplars, substrate-provided demos and archetypes, catalog incident reproductions, top-DeFi production code (Etherscan), and synthesized vulnerability exemplars.",
+  "tiers": {
+    "A-synthetic": "Hand-written minimal exemplars; ground-truth-known obligation behavior.",
+    "B-substrate": "Contracts shipped with the PARALLAX-5 substrate (v1.0.1).",
+    "C-catalog": "Minimal reproductions of incidents from the substrate paper's 53-incident catalog (\u00a710).",
+    "D-etherscan": "Production contracts fetched via Etherscan V2 API; verified on-chain code.",
+    "E-vulnerable-exemplars": "Synthesized vulnerable patterns covering common smart-contract bug classes."
+  },
+  "contracts": [
+    {
+      "contract_id": "a1_deposit_withdraw_paired",
+      "source_path": "corpus/contracts/a1_deposit_withdraw_paired/source.sol",
+      "purpose": "Simple deposit/withdraw pool with 1:1 share accounting.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a1_share_inflation_naive",
+      "source_path": "corpus/contracts/a1_share_inflation_naive/source.sol",
+      "purpose": "Naive ERC-4626 share calc vulnerable to first-depositor inflation.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=vulnerable"
+    },
+    {
+      "contract_id": "a1_trivial_constant_balance",
+      "source_path": "corpus/contracts/a1_trivial_constant_balance/source.sol",
+      "purpose": "Minimal contract that holds a constant value; trivially satisfies A1.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=trivially_safe"
+    },
+    {
+      "contract_id": "a1_violator_mint_for_free",
+      "source_path": "corpus/contracts/a1_violator_mint_for_free/source.sol",
+      "purpose": "Contract that mints shares without backing assets; violates A1.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a1_virtual_shares_hardened",
+      "source_path": "corpus/contracts/a1_virtual_shares_hardened/source.sol",
+      "purpose": "ERC-4626 with virtual-share offset against inflation.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a2_delegatecall_through",
+      "source_path": "corpus/contracts/a2_delegatecall_through/source.sol",
+      "purpose": "Proxy with arbitrary delegatecall; A2 violator.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a2_owner_only_setter",
+      "source_path": "corpus/contracts/a2_owner_only_setter/source.sol",
+      "purpose": "Setter restricted to owner; trivially A2-safe.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a2_role_based",
+      "source_path": "corpus/contracts/a2_role_based/source.sol",
+      "purpose": "Role-based access control over multiple methods.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a2_two_step_owner",
+      "source_path": "corpus/contracts/a2_two_step_owner/source.sol",
+      "purpose": "Two-step ownership transfer; A2 hardened.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a2_unprotected_setter",
+      "source_path": "corpus/contracts/a2_unprotected_setter/source.sol",
+      "purpose": "Public setter on critical state; A2 violator.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a3_ecrecover_verify",
+      "source_path": "corpus/contracts/a3_ecrecover_verify/source.sol",
+      "purpose": "ECDSA-verified message acceptor.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a3_eip712_typed",
+      "source_path": "corpus/contracts/a3_eip712_typed/source.sol",
+      "purpose": "EIP-712-styled typed-data signature acceptor.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a3_no_chain_id",
+      "source_path": "corpus/contracts/a3_no_chain_id/source.sol",
+      "purpose": "Bridge w/o chain-id binding; cross-chain replay; A3 violator.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a3_quorum_attestation",
+      "source_path": "corpus/contracts/a3_quorum_attestation/source.sol",
+      "purpose": "k-of-n attestor quorum signature verification.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a3_unchecked_signer",
+      "source_path": "corpus/contracts/a3_unchecked_signer/source.sol",
+      "purpose": "ECDSA verify without checking ecrecover != 0; A3 violator.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a4_checks_effects_interactions",
+      "source_path": "corpus/contracts/a4_checks_effects_interactions/source.sol",
+      "purpose": "CEI pattern correctly applied; A4 hardened.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a4_no_nonce_replay",
+      "source_path": "corpus/contracts/a4_no_nonce_replay/source.sol",
+      "purpose": "No replay protection; A4 violator.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a4_nonce_protected",
+      "source_path": "corpus/contracts/a4_nonce_protected/source.sol",
+      "purpose": "Nonce-tracked actions; A4 hardened.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a4_reentrancy_via_callback",
+      "source_path": "corpus/contracts/a4_reentrancy_via_callback/source.sol",
+      "purpose": "Reentrancy violates temporal distinctness; A4 violator.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a4_timestamp_gated",
+      "source_path": "corpus/contracts/a4_timestamp_gated/source.sol",
+      "purpose": "Timestamp-gated unlock; A4 hardened.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a5_freshness_check",
+      "source_path": "corpus/contracts/a5_freshness_check/source.sol",
+      "purpose": "Chainlink-style oracle reader with freshness gate; A5 hardened.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a5_quorum_oracle",
+      "source_path": "corpus/contracts/a5_quorum_oracle/source.sol",
+      "purpose": "Median-of-N oracle aggregation; A5 hardened.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "a5_single_signer_oracle",
+      "source_path": "corpus/contracts/a5_single_signer_oracle/source.sol",
+      "purpose": "Single-signer oracle with no audit trail; A5 violator.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a5_stale_price_accepted",
+      "source_path": "corpus/contracts/a5_stale_price_accepted/source.sol",
+      "purpose": "Oracle reader with no freshness check; A5 violator.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=violator"
+    },
+    {
+      "contract_id": "a5_trust_tagged",
+      "source_path": "corpus/contracts/a5_trust_tagged/source.sol",
+      "purpose": "Oracle output explicitly trust-tagged before use; A5 hardened.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "agent_gate_runtime",
+      "source_path": "corpus/contracts/agent_gate_runtime/source.sol",
+      "purpose": "StepSecure-shielded relay gate for AI-agent transactions",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/agent_gate/contracts/RuntimeGate.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "agent_gate_target",
+      "source_path": "corpus/contracts/agent_gate_target/source.sol",
+      "purpose": "Target vault sitting behind the AI-agent runtime gate",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/agent_gate/contracts/TargetVault.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "bridge_1of1_attestation",
+      "source_path": "corpus/contracts/bridge_1of1_attestation/source.sol",
+      "purpose": "Single-attestor cross-chain bridge case study",
+      "expected_obligations": [
+        "A3",
+        "A5"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/case_studies/bridge_attestation/contracts/Bridge1of1.t.sol",
+      "notes": "Tier B-substrate, role=case_study"
+    },
+    {
+      "contract_id": "bridge_a3_archetype",
+      "source_path": "corpus/contracts/bridge_a3_archetype/source.sol",
+      "purpose": "Bridge archetype: signature integrity surface",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/Bridge.sol",
+      "notes": "Tier B-substrate, role=exemplar"
+    },
+    {
+      "contract_id": "bridge_a3_test",
+      "source_path": "corpus/contracts/bridge_a3_test/source.sol",
+      "purpose": "Halmos test contract for the A3 signature-integrity archetype",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/BridgeA3.t.sol",
+      "notes": "Tier B-substrate, role=test"
+    },
+    {
+      "contract_id": "bridge_patched",
+      "source_path": "corpus/contracts/bridge_patched/source.sol",
+      "purpose": "Bridge with chain-id binding and replay protection",
+      "expected_obligations": [
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/bridge/contracts/PatchedBridge.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "bridge_quorum_attestation",
+      "source_path": "corpus/contracts/bridge_quorum_attestation/source.sol",
+      "purpose": "Multi-attestor quorum bridge case study",
+      "expected_obligations": [
+        "A3",
+        "A5"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/case_studies/bridge_attestation/contracts/BridgeQuorum.t.sol",
+      "notes": "Tier B-substrate, role=case_study"
+    },
+    {
+      "contract_id": "bridge_vulnerable_1of1",
+      "source_path": "corpus/contracts/bridge_vulnerable_1of1/source.sol",
+      "purpose": "Single-signer cross-chain bridge vulnerable to signature replay",
+      "expected_obligations": [
+        "A3",
+        "A5"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/bridge/contracts/VulnerableBridge.sol",
+      "notes": "Tier B-substrate, role=vulnerable"
+    },
+    {
+      "contract_id": "cream_a1_test",
+      "source_path": "corpus/contracts/cream_a1_test/source.sol",
+      "purpose": "Halmos test contract for the A1 first-depositor archetype",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/CreamA1.t.sol",
+      "notes": "Tier B-substrate, role=test"
+    },
+    {
+      "contract_id": "cream_hardened",
+      "source_path": "corpus/contracts/cream_hardened/source.sol",
+      "purpose": "Cream-Harvest archetype: hardened share accounting",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/CreamHardened.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "cream_vulnerable",
+      "source_path": "corpus/contracts/cream_vulnerable/source.sol",
+      "purpose": "Cream-Harvest archetype: first-depositor vulnerability",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/CreamVuln.sol",
+      "notes": "Tier B-substrate, role=vulnerable"
+    },
+    {
+      "contract_id": "lending_vulnerable",
+      "source_path": "corpus/contracts/lending_vulnerable/source.sol",
+      "purpose": "Lending protocol with deliberate vulnerabilities",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/tests/VulnerableLending.sol",
+      "notes": "Tier B-substrate, role=vulnerable"
+    },
+    {
+      "contract_id": "oracle_a5_archetype",
+      "source_path": "corpus/contracts/oracle_a5_archetype/source.sol",
+      "purpose": "Oracle archetype: external-attestation trust boundary",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/Oracle.sol",
+      "notes": "Tier B-substrate, role=exemplar"
+    },
+    {
+      "contract_id": "oracle_a5_test",
+      "source_path": "corpus/contracts/oracle_a5_test/source.sol",
+      "purpose": "Halmos test contract for the A5 oracle-trust archetype",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/OracleA5.t.sol",
+      "notes": "Tier B-substrate, role=test"
+    },
+    {
+      "contract_id": "parallax_registry",
+      "source_path": "corpus/contracts/parallax_registry/source.sol",
+      "purpose": "PARALLAX-5 certificate registry; state-machine contract",
+      "expected_obligations": [
+        "A2",
+        "A4"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/registry/src/ParallaxRegistry.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "solv_a4_test",
+      "source_path": "corpus/contracts/solv_a4_test/source.sol",
+      "purpose": "Halmos test contract for the A4 temporal-distinctness archetype",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/SolvA4.t.sol",
+      "notes": "Tier B-substrate, role=test"
+    },
+    {
+      "contract_id": "solv_pattern",
+      "source_path": "corpus/contracts/solv_pattern/source.sol",
+      "purpose": "Solv archetype: temporal-distinctness pattern",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/SolvPattern.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "vault_patched_4626",
+      "source_path": "corpus/contracts/vault_patched_4626/source.sol",
+      "purpose": "ERC-4626 vault with virtual-shares mitigation",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/vault/contracts/PatchedVault.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "vault_vulnerable_4626",
+      "source_path": "corpus/contracts/vault_vulnerable_4626/source.sol",
+      "purpose": "ERC-4626 vault vulnerable to first-depositor inflation attack",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/vault/contracts/VulnerableVault.sol",
+      "notes": "Tier B-substrate, role=vulnerable"
+    },
+    {
+      "contract_id": "beanstalk_governance_flashloan",
+      "source_path": "corpus/contracts/beanstalk_governance_flashloan/source.sol",
+      "purpose": "Beanstalk archetype: governance vote weighted by snapshot-vulnerable balance.",
+      "expected_obligations": [
+        "A2",
+        "A4"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "compound_overflow_legacy",
+      "source_path": "corpus/contracts/compound_overflow_legacy/source.sol",
+      "purpose": "Compound legacy archetype: integer overflow on inflated balance.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "dForce_oracle_circular",
+      "source_path": "corpus/contracts/dForce_oracle_circular/source.sol",
+      "purpose": "dForce archetype: circular price oracle dependency.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "dao_unbounded_loop",
+      "source_path": "corpus/contracts/dao_unbounded_loop/source.sol",
+      "purpose": "DAO archetype: unbounded for-loop over user list.",
+      "expected_obligations": [
+        "A2",
+        "A4"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "euler_donation_inflation",
+      "source_path": "corpus/contracts/euler_donation_inflation/source.sol",
+      "purpose": "Euler-style donation accounting archetype (composite A1+A2 with self-borrow path).",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "flashloan_reentry_guard_broken",
+      "source_path": "corpus/contracts/flashloan_reentry_guard_broken/source.sol",
+      "purpose": "Reentrancy guard with wrong lock granularity.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "harvest_share_price_first_dep",
+      "source_path": "corpus/contracts/harvest_share_price_first_dep/source.sol",
+      "purpose": "Harvest archetype: first depositor mints arbitrary shares.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "hundred_collateral_swap",
+      "source_path": "corpus/contracts/hundred_collateral_swap/source.sol",
+      "purpose": "Hundred Finance archetype: read-only reentrancy on collateral price.",
+      "expected_obligations": [
+        "A4",
+        "A5"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "mango_oracle_manipulation",
+      "source_path": "corpus/contracts/mango_oracle_manipulation/source.sol",
+      "purpose": "Mango archetype: price feed reads market that the protocol itself drives.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "multichain_unconstrained_admin",
+      "source_path": "corpus/contracts/multichain_unconstrained_admin/source.sol",
+      "purpose": "Multichain archetype: privileged operator can withdraw any token.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "nomad_init_replay",
+      "source_path": "corpus/contracts/nomad_init_replay/source.sol",
+      "purpose": "Nomad bridge archetype: re-initialization with zero hash bypasses signature checks.",
+      "expected_obligations": [
+        "A2",
+        "A3"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "ronin_signature_quorum_breach",
+      "source_path": "corpus/contracts/ronin_signature_quorum_breach/source.sol",
+      "purpose": "Ronin archetype: validator quorum below required threshold.",
+      "expected_obligations": [
+        "A2",
+        "A3"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "staking_double_claim",
+      "source_path": "corpus/contracts/staking_double_claim/source.sol",
+      "purpose": "Staking archetype: rewards claimed twice via timing bug.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "visor_arbitrary_call",
+      "source_path": "corpus/contracts/visor_arbitrary_call/source.sol",
+      "purpose": "Visor archetype: delegatecall to user-provided target.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "wormhole_unchecked_signer",
+      "source_path": "corpus/contracts/wormhole_unchecked_signer/source.sol",
+      "purpose": "Wormhole-style archetype: signature recovery without checking ecrecover != 0.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    },
+    {
+      "contract_id": "aave_v3_pool",
+      "source_path": "corpus/contracts/aave_v3_pool/source.sol",
+      "purpose": "Aave V3 Pool: lending core; supply/borrow/liquidation entrypoint.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "aave_v3_pool_configurator",
+      "source_path": "corpus/contracts/aave_v3_pool_configurator/source.sol",
+      "purpose": "Aave V3 PoolConfigurator: admin role for reserve params.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x64b761D848206f447Fe2dd461b0c635Ec39EbB27#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "across_spoke_pool",
+      "source_path": "corpus/contracts/across_spoke_pool/source.sol",
+      "purpose": "Across SpokePool: cross-chain bridge deposit/relay.",
+      "expected_obligations": [
+        "A3",
+        "A5"
+      ],
+      "provenance": "https://etherscan.io/address/0x5c7BCd6E7De5423a257D81B442095A1a6ced35C5#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "balancer_v2_vault",
+      "source_path": "corpus/contracts/balancer_v2_vault/source.sol",
+      "purpose": "Balancer V2 Vault: single source of liquidity for all pools.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "chainlink_feed_registry",
+      "source_path": "corpus/contracts/chainlink_feed_registry/source.sol",
+      "purpose": "Chainlink FeedRegistry: discovery for aggregator feeds.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "https://etherscan.io/address/0x47Fb2585D2C56Fe188D0E6ec628a38b74fCeeeDf#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "compound_v3_usdc_comet",
+      "source_path": "corpus/contracts/compound_v3_usdc_comet/source.sol",
+      "purpose": "Compound III (Comet) USDC market: unified supply/borrow.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0xc3d688B66703497DAA19211EEdff47f25384cdc3#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "convex_booster",
+      "source_path": "corpus/contracts/convex_booster/source.sol",
+      "purpose": "Convex Booster: Curve LP staking router.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0xF403C135812408BFbE8713b5A23a04b3D48AAE31#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "curve_3pool",
+      "source_path": "corpus/contracts/curve_3pool/source.sol",
+      "purpose": "Curve 3pool: USDC/USDT/DAI stable AMM.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "https://etherscan.io/address/0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "frax_share_token",
+      "source_path": "corpus/contracts/frax_share_token/source.sol",
+      "purpose": "FRAX stablecoin: fractional-algorithmic supply control.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x853d955aCEf822Db058eb8505911ED77F175b99e#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "hop_l1_bridge_usdc",
+      "source_path": "corpus/contracts/hop_l1_bridge_usdc/source.sol",
+      "purpose": "Hop Protocol L1 USDC bridge: rollup-to-L1 messaging.",
+      "expected_obligations": [
+        "A3",
+        "A5"
+      ],
+      "provenance": "https://etherscan.io/address/0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "layerzero_v2_endpoint",
+      "source_path": "corpus/contracts/layerzero_v2_endpoint/source.sol",
+      "purpose": "LayerZero V2 Endpoint: cross-chain message dispatch.",
+      "expected_obligations": [
+        "A3",
+        "A5"
+      ],
+      "provenance": "https://etherscan.io/address/0x1a44076050125825900e736c501f859c50fE728c#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "lido_steth",
+      "source_path": "corpus/contracts/lido_steth/source.sol",
+      "purpose": "Lido stETH: rebasing staked-ETH token; rate of asset:share.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "https://etherscan.io/address/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "maker_jug",
+      "source_path": "corpus/contracts/maker_jug/source.sol",
+      "purpose": "MakerDAO Jug: stability-fee accumulator.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x19c0976f590D67707E62397C87829d896Dc0f1F1#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "maker_spotter",
+      "source_path": "corpus/contracts/maker_spotter/source.sol",
+      "purpose": "MakerDAO Spotter: oracle-source-of-truth for ilk prices.",
+      "expected_obligations": [
+        "A2",
+        "A5"
+      ],
+      "provenance": "https://etherscan.io/address/0x65C79fcB50Ca1594B025960e539eD7A9a6D434A3#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "maker_vat",
+      "source_path": "corpus/contracts/maker_vat/source.sol",
+      "purpose": "MakerDAO Vat: core CDP ledger; rights/dues accounting.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "morpho_blue",
+      "source_path": "corpus/contracts/morpho_blue/source.sol",
+      "purpose": "Morpho Blue: minimal lending primitive.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "oneinch_aggregation_router_v6",
+      "source_path": "corpus/contracts/oneinch_aggregation_router_v6/source.sol",
+      "purpose": "1inch Aggregation Router v6: stateless swap router.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "https://etherscan.io/address/0x111111125421cA6dc452d289314280a0f8842A65#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "pendle_router",
+      "source_path": "corpus/contracts/pendle_router/source.sol",
+      "purpose": "Pendle Router: yield-token splitting and trading.",
+      "expected_obligations": [
+        "A1",
+        "A4"
+      ],
+      "provenance": "https://etherscan.io/address/0x888888888889758F76e7103c6CbF23ABbF58F946#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "sushi_masterchef_v2",
+      "source_path": "corpus/contracts/sushi_masterchef_v2/source.sol",
+      "purpose": "SushiSwap MasterChef V2: reward emission contract.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0xEF0881eC094552b2e128Cf945EF17a6752B4Ec5d#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "synthetix_v3_core",
+      "source_path": "corpus/contracts/synthetix_v3_core/source.sol",
+      "purpose": "Synthetix V3 Core: collateral + market accounts.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0xffffffaEff0B96Ea8e4f94b2253f31abdD875847#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "uniswap_v2_factory",
+      "source_path": "corpus/contracts/uniswap_v2_factory/source.sol",
+      "purpose": "Uniswap V2 Factory: pair deployer.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "uniswap_v3_factory",
+      "source_path": "corpus/contracts/uniswap_v3_factory/source.sol",
+      "purpose": "Uniswap V3 Factory: deploys pools with admin-controlled fee tiers.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x1F98431c8aD98523631AE4a59f267346ea31F984#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "uniswap_v3_router_2",
+      "source_path": "corpus/contracts/uniswap_v3_router_2/source.sol",
+      "purpose": "Uniswap V3 SwapRouter02: stateless swap router.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "https://etherscan.io/address/0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "uniswap_v4_pool_manager",
+      "source_path": "corpus/contracts/uniswap_v4_pool_manager/source.sol",
+      "purpose": "Uniswap V4 PoolManager: unified singleton holding all V4 pools; hook-extensible AMM.",
+      "expected_obligations": [
+        "A1",
+        "A2"
+      ],
+      "provenance": "https://etherscan.io/address/0x000000000004444c5dC75cB358380D2e3dE08A90#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "yearn_v3_vault_usdc",
+      "source_path": "corpus/contracts/yearn_v3_vault_usdc/source.sol",
+      "purpose": "Yearn V3 USDC vault: ERC-4626 strategy-routing vault.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "https://etherscan.io/address/0x028eC7330ff87667b6dfb0D94b954c820195336c#code",
+      "notes": "Tier D-etherscan, role=production"
+    },
+    {
+      "contract_id": "airdrop_double_claim",
+      "source_path": "corpus/contracts/airdrop_double_claim/source.sol",
+      "purpose": "Airdrop with mutable claim state and reentrancy gap.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "erc20_pull_no_approve_check",
+      "source_path": "corpus/contracts/erc20_pull_no_approve_check/source.sol",
+      "purpose": "ERC-20 transferFrom missing allowance check.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "erc721_safe_transfer_recursive",
+      "source_path": "corpus/contracts/erc721_safe_transfer_recursive/source.sol",
+      "purpose": "ERC-721 safeTransferFrom callback re-entered into transfer.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "flashloan_cumulative_balance",
+      "source_path": "corpus/contracts/flashloan_cumulative_balance/source.sol",
+      "purpose": "Cumulative balance used as price; flash-loan manipulable.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "init_uninitialized",
+      "source_path": "corpus/contracts/init_uninitialized/source.sol",
+      "purpose": "Constructor as initializer; UUPS uninitialized impl.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "liquidate_no_oracle_check",
+      "source_path": "corpus/contracts/liquidate_no_oracle_check/source.sol",
+      "purpose": "Liquidation engine with no oracle freshness check.",
+      "expected_obligations": [
+        "A5"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "liquidity_pool_unbalanced_swap",
+      "source_path": "corpus/contracts/liquidity_pool_unbalanced_swap/source.sol",
+      "purpose": "AMM with no minimum-out enforced.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "merkle_drop_no_root_verify",
+      "source_path": "corpus/contracts/merkle_drop_no_root_verify/source.sol",
+      "purpose": "Merkle airdrop with weak proof verification.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "oracle_first_data_attack",
+      "source_path": "corpus/contracts/oracle_first_data_attack/source.sol",
+      "purpose": "First-write oracle attack: any address sets initial price.",
+      "expected_obligations": [
+        "A2",
+        "A5"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "oracle_governance_attack",
+      "source_path": "corpus/contracts/oracle_governance_attack/source.sol",
+      "purpose": "Oracle parameter set without timelock or quorum.",
+      "expected_obligations": [
+        "A2",
+        "A5"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "permit_replay_no_deadline",
+      "source_path": "corpus/contracts/permit_replay_no_deadline/source.sol",
+      "purpose": "EIP-2612 permit without deadline check.",
+      "expected_obligations": [
+        "A4"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "signature_malleability",
+      "source_path": "corpus/contracts/signature_malleability/source.sol",
+      "purpose": "ECDSA signature malleability surface (high-s allowed).",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "staking_inflation_via_donation",
+      "source_path": "corpus/contracts/staking_inflation_via_donation/source.sol",
+      "purpose": "Staking pool vulnerable to donation-based share inflation.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "validator_signature_aggregation",
+      "source_path": "corpus/contracts/validator_signature_aggregation/source.sol",
+      "purpose": "Aggregate signature without checking signer uniqueness.",
+      "expected_obligations": [
+        "A3"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "vesting_clawback_misuse",
+      "source_path": "corpus/contracts/vesting_clawback_misuse/source.sol",
+      "purpose": "Vesting with unauthorized clawback path.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    },
+    {
+      "contract_id": "withdraw_partial_state_update",
+      "source_path": "corpus/contracts/withdraw_partial_state_update/source.sol",
+      "purpose": "Partial state update on withdraw leaves stale fields.",
+      "expected_obligations": [
+        "A1",
+        "A4"
+      ],
+      "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1",
+      "notes": "Tier E-vulnerable-exemplars, role=violator"
+    }
+  ]
+}

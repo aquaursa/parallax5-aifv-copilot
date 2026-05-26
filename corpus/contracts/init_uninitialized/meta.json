@@ -1,0 +1,10 @@
+{
+  "contract_id": "init_uninitialized",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "Constructor as initializer; UUPS uninitialized impl.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

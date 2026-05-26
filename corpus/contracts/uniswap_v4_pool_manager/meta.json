@@ -1,0 +1,12 @@
+{
+  "contract_id": "uniswap_v4_pool_manager",
+  "tier": "D-etherscan",
+  "purpose": "Uniswap V4 PoolManager: unified singleton holding all V4 pools; hook-extensible AMM.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x000000000004444c5dC75cB358380D2e3dE08A90#code",
+  "address": "0x000000000004444c5dC75cB358380D2e3dE08A90"
+}

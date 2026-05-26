@@ -1,0 +1,12 @@
+{
+  "contract_id": "maker_spotter",
+  "tier": "D-etherscan",
+  "purpose": "MakerDAO Spotter: oracle-source-of-truth for ilk prices.",
+  "expected_obligations": [
+    "A2",
+    "A5"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x65C79fcB50Ca1594B025960e539eD7A9a6D434A3#code",
+  "address": "0x65C79fcB50Ca1594B025960e539eD7A9a6D434A3"
+}

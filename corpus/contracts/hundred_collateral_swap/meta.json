@@ -1,0 +1,11 @@
+{
+  "contract_id": "hundred_collateral_swap",
+  "tier": "C-catalog",
+  "purpose": "Hundred Finance archetype: read-only reentrancy on collateral price.",
+  "expected_obligations": [
+    "A4",
+    "A5"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

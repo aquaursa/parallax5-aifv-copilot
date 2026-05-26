@@ -1,0 +1,10 @@
+{
+  "contract_id": "mango_oracle_manipulation",
+  "tier": "C-catalog",
+  "purpose": "Mango archetype: price feed reads market that the protocol itself drives.",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

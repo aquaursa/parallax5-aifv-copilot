@@ -1,0 +1,11 @@
+{
+  "contract_id": "uniswap_v2_factory",
+  "tier": "D-etherscan",
+  "purpose": "Uniswap V2 Factory: pair deployer.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f#code",
+  "address": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"
+}

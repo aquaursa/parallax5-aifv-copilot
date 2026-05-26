@@ -1,0 +1,10 @@
+{
+  "contract_id": "cream_hardened",
+  "tier": "B-substrate",
+  "purpose": "Cream-Harvest archetype: hardened share accounting",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "hardened",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/CreamHardened.sol"
+}

@@ -1,0 +1,12 @@
+{
+  "contract_id": "morpho_blue",
+  "tier": "D-etherscan",
+  "purpose": "Morpho Blue: minimal lending primitive.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb#code",
+  "address": "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb"
+}

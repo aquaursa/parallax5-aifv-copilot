@@ -1,0 +1,12 @@
+{
+  "contract_id": "sushi_masterchef_v2",
+  "tier": "D-etherscan",
+  "purpose": "SushiSwap MasterChef V2: reward emission contract.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0xEF0881eC094552b2e128Cf945EF17a6752B4Ec5d#code",
+  "address": "0xEF0881eC094552b2e128Cf945EF17a6752B4Ec5d"
+}

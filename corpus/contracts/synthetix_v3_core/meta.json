@@ -1,0 +1,12 @@
+{
+  "contract_id": "synthetix_v3_core",
+  "tier": "D-etherscan",
+  "purpose": "Synthetix V3 Core: collateral + market accounts.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0xffffffaEff0B96Ea8e4f94b2253f31abdD875847#code",
+  "address": "0xffffffaEff0B96Ea8e4f94b2253f31abdD875847"
+}

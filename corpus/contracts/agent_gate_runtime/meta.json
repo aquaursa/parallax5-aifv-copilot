@@ -1,0 +1,11 @@
+{
+  "contract_id": "agent_gate_runtime",
+  "tier": "B-substrate",
+  "purpose": "StepSecure-shielded relay gate for AI-agent transactions",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "hardened",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/agent_gate/contracts/RuntimeGate.sol"
+}

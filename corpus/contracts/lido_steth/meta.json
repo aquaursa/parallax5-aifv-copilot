@@ -1,0 +1,11 @@
+{
+  "contract_id": "lido_steth",
+  "tier": "D-etherscan",
+  "purpose": "Lido stETH: rebasing staked-ETH token; rate of asset:share.",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84#code",
+  "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
+}

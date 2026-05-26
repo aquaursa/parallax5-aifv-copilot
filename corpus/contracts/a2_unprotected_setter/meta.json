@@ -1,0 +1,10 @@
+{
+  "contract_id": "a2_unprotected_setter",
+  "tier": "A-synthetic",
+  "purpose": "Public setter on critical state; A2 violator.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "violator",
+  "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)"
+}

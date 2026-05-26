@@ -1,0 +1,10 @@
+{
+  "contract_id": "oracle_a5_archetype",
+  "tier": "B-substrate",
+  "purpose": "Oracle archetype: external-attestation trust boundary",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "exemplar",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/Oracle.sol"
+}

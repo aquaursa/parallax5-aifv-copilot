@@ -1,0 +1,12 @@
+{
+  "contract_id": "across_spoke_pool",
+  "tier": "D-etherscan",
+  "purpose": "Across SpokePool: cross-chain bridge deposit/relay.",
+  "expected_obligations": [
+    "A3",
+    "A5"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x5c7BCd6E7De5423a257D81B442095A1a6ced35C5#code",
+  "address": "0x5c7BCd6E7De5423a257D81B442095A1a6ced35C5"
+}

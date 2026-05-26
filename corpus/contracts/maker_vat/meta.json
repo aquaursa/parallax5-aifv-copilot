@@ -1,0 +1,12 @@
+{
+  "contract_id": "maker_vat",
+  "tier": "D-etherscan",
+  "purpose": "MakerDAO Vat: core CDP ledger; rights/dues accounting.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B#code",
+  "address": "0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B"
+}

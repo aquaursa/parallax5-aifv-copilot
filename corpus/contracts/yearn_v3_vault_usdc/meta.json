@@ -1,0 +1,11 @@
+{
+  "contract_id": "yearn_v3_vault_usdc",
+  "tier": "D-etherscan",
+  "purpose": "Yearn V3 USDC vault: ERC-4626 strategy-routing vault.",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x028eC7330ff87667b6dfb0D94b954c820195336c#code",
+  "address": "0x028eC7330ff87667b6dfb0D94b954c820195336c"
+}

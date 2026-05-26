@@ -1,0 +1,10 @@
+{
+  "contract_id": "a4_reentrancy_via_callback",
+  "tier": "A-synthetic",
+  "purpose": "Reentrancy violates temporal distinctness; A4 violator.",
+  "expected_obligations": [
+    "A4"
+  ],
+  "role": "violator",
+  "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)"
+}

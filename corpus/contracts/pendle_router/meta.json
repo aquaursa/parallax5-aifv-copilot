@@ -1,0 +1,12 @@
+{
+  "contract_id": "pendle_router",
+  "tier": "D-etherscan",
+  "purpose": "Pendle Router: yield-token splitting and trading.",
+  "expected_obligations": [
+    "A1",
+    "A4"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x888888888889758F76e7103c6CbF23ABbF58F946#code",
+  "address": "0x888888888889758F76e7103c6CbF23ABbF58F946"
+}

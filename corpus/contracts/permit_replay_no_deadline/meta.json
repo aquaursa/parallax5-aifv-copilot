@@ -1,0 +1,10 @@
+{
+  "contract_id": "permit_replay_no_deadline",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "EIP-2612 permit without deadline check.",
+  "expected_obligations": [
+    "A4"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

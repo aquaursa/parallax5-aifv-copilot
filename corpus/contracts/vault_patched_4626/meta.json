@@ -1,0 +1,10 @@
+{
+  "contract_id": "vault_patched_4626",
+  "tier": "B-substrate",
+  "purpose": "ERC-4626 vault with virtual-shares mitigation",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "hardened",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/vault/contracts/PatchedVault.sol"
+}

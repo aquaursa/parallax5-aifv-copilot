@@ -1,0 +1,10 @@
+{
+  "contract_id": "liquidate_no_oracle_check",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "Liquidation engine with no oracle freshness check.",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

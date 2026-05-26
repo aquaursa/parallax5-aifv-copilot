@@ -1,0 +1,11 @@
+{
+  "contract_id": "uniswap_v3_factory",
+  "tier": "D-etherscan",
+  "purpose": "Uniswap V3 Factory: deploys pools with admin-controlled fee tiers.",
+  "expected_obligations": [
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x1F98431c8aD98523631AE4a59f267346ea31F984#code",
+  "address": "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+}

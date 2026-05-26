@@ -1,0 +1,11 @@
+{
+  "contract_id": "agent_gate_target",
+  "tier": "B-substrate",
+  "purpose": "Target vault sitting behind the AI-agent runtime gate",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "hardened",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/agent_gate/contracts/TargetVault.sol"
+}

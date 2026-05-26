@@ -1,0 +1,12 @@
+{
+  "contract_id": "layerzero_v2_endpoint",
+  "tier": "D-etherscan",
+  "purpose": "LayerZero V2 Endpoint: cross-chain message dispatch.",
+  "expected_obligations": [
+    "A3",
+    "A5"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x1a44076050125825900e736c501f859c50fE728c#code",
+  "address": "0x1a44076050125825900e736c501f859c50fE728c"
+}

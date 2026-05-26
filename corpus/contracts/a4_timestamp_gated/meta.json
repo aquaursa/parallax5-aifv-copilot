@@ -1,0 +1,10 @@
+{
+  "contract_id": "a4_timestamp_gated",
+  "tier": "A-synthetic",
+  "purpose": "Timestamp-gated unlock; A4 hardened.",
+  "expected_obligations": [
+    "A4"
+  ],
+  "role": "hardened",
+  "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)"
+}

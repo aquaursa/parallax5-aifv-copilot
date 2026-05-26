@@ -1,0 +1,11 @@
+{
+  "contract_id": "lending_vulnerable",
+  "tier": "B-substrate",
+  "purpose": "Lending protocol with deliberate vulnerabilities",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "vulnerable",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/tests/VulnerableLending.sol"
+}

@@ -1,0 +1,10 @@
+{
+  "contract_id": "cream_a1_test",
+  "tier": "B-substrate",
+  "purpose": "Halmos test contract for the A1 first-depositor archetype",
+  "expected_obligations": [
+    "A1"
+  ],
+  "role": "test",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/CreamA1.t.sol"
+}

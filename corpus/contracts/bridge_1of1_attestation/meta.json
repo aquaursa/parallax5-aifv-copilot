@@ -1,0 +1,11 @@
+{
+  "contract_id": "bridge_1of1_attestation",
+  "tier": "B-substrate",
+  "purpose": "Single-attestor cross-chain bridge case study",
+  "expected_obligations": [
+    "A3",
+    "A5"
+  ],
+  "role": "case_study",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/case_studies/bridge_attestation/contracts/Bridge1of1.t.sol"
+}

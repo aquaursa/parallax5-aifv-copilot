@@ -1,0 +1,10 @@
+{
+  "contract_id": "a4_checks_effects_interactions",
+  "tier": "A-synthetic",
+  "purpose": "CEI pattern correctly applied; A4 hardened.",
+  "expected_obligations": [
+    "A4"
+  ],
+  "role": "hardened",
+  "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)"
+}

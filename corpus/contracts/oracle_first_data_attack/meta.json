@@ -1,0 +1,11 @@
+{
+  "contract_id": "oracle_first_data_attack",
+  "tier": "E-vulnerable-exemplars",
+  "purpose": "First-write oracle attack: any address sets initial price.",
+  "expected_obligations": [
+    "A2",
+    "A5"
+  ],
+  "role": "violator",
+  "provenance": "synthesized vulnerable variant for PARALLAX-5 AI-FV benchmark v0.1"
+}

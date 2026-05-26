@@ -1,0 +1,10 @@
+{
+  "contract_id": "staking_double_claim",
+  "tier": "C-catalog",
+  "purpose": "Staking archetype: rewards claimed twice via timing bug.",
+  "expected_obligations": [
+    "A4"
+  ],
+  "role": "vulnerable",
+  "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)"
+}

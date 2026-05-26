@@ -1,0 +1,12 @@
+{
+  "contract_id": "frax_share_token",
+  "tier": "D-etherscan",
+  "purpose": "FRAX stablecoin: fractional-algorithmic supply control.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x853d955aCEf822Db058eb8505911ED77F175b99e#code",
+  "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e"
+}

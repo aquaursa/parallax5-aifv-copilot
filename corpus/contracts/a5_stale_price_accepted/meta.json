@@ -1,0 +1,10 @@
+{
+  "contract_id": "a5_stale_price_accepted",
+  "tier": "A-synthetic",
+  "purpose": "Oracle reader with no freshness check; A5 violator.",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "violator",
+  "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)"
+}

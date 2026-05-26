@@ -1,0 +1,11 @@
+{
+  "contract_id": "bridge_vulnerable_1of1",
+  "tier": "B-substrate",
+  "purpose": "Single-signer cross-chain bridge vulnerable to signature replay",
+  "expected_obligations": [
+    "A3",
+    "A5"
+  ],
+  "role": "vulnerable",
+  "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/bridge/contracts/VulnerableBridge.sol"
+}

@@ -1,0 +1,12 @@
+{
+  "contract_id": "balancer_v2_vault",
+  "tier": "D-etherscan",
+  "purpose": "Balancer V2 Vault: single source of liquidity for all pools.",
+  "expected_obligations": [
+    "A1",
+    "A2"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8#code",
+  "address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+}

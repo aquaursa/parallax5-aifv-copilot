@@ -1,0 +1,10 @@
+{
+  "contract_id": "a5_single_signer_oracle",
+  "tier": "A-synthetic",
+  "purpose": "Single-signer oracle with no audit trail; A5 violator.",
+  "expected_obligations": [
+    "A5"
+  ],
+  "role": "violator",
+  "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)"
+}

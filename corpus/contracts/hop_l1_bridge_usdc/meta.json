@@ -1,0 +1,12 @@
+{
+  "contract_id": "hop_l1_bridge_usdc",
+  "tier": "D-etherscan",
+  "purpose": "Hop Protocol L1 USDC bridge: rollup-to-L1 messaging.",
+  "expected_obligations": [
+    "A3",
+    "A5"
+  ],
+  "role": "production",
+  "provenance": "https://etherscan.io/address/0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a#code",
+  "address": "0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a"
+}
