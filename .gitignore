@@ -48,3 +48,9 @@ results/cache/
 # Verification project: rebuilt fresh on each benchmark run
 verification_project/.lake/
 verification_project/Copilot/Attempt*.lean
+
+# But DO commit small-scale run summaries and the Anthropic self-host cache
+!results/anthropic_cache/
+!results/anthropic_cache/**
+!results/run_v0_1_1contract_4x4/
+!results/run_v0_1_1contract_4x4/**

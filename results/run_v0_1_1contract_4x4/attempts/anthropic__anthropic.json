@@ -1,0 +1,17 @@
+{
+  "spec_provider": "anthropic",
+  "proof_provider": "anthropic",
+  "accepted": true,
+  "verdict": {
+    "accepted": true,
+    "file_path": "results/run_v0_1_1contract_4x4/lean_files/Attempt_anthropic_anthropic.lean",
+    "statement_present": true,
+    "no_sorry": true,
+    "no_admit": true,
+    "no_axiom_intro": true,
+    "diagnostic_errors": [],
+    "diagnostic_warnings": [],
+    "elapsed_seconds": 3.0070311229999334,
+    "rejection_reason": ""
+  }
+}

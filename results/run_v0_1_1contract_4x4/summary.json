@@ -1,0 +1,31 @@
+{
+  "contract_id": "a1_trivial_constant_balance",
+  "spec_providers": [
+    "anthropic",
+    "openai",
+    "deepseek"
+  ],
+  "proof_providers": [
+    "anthropic",
+    "openai",
+    "deepseek",
+    "mistral"
+  ],
+  "total_attempts": 12,
+  "accepted": 12,
+  "acceptance_rate": 1.0,
+  "by_provider_pair": {
+    "spec:anthropic__proof:anthropic": "accepted",
+    "spec:anthropic__proof:openai": "accepted",
+    "spec:anthropic__proof:deepseek": "accepted",
+    "spec:anthropic__proof:mistral": "accepted",
+    "spec:openai__proof:anthropic": "accepted",
+    "spec:openai__proof:openai": "accepted",
+    "spec:openai__proof:deepseek": "accepted",
+    "spec:openai__proof:mistral": "accepted",
+    "spec:deepseek__proof:anthropic": "accepted",
+    "spec:deepseek__proof:openai": "accepted",
+    "spec:deepseek__proof:deepseek": "accepted",
+    "spec:deepseek__proof:mistral": "accepted"
+  }
+}

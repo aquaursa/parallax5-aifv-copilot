@@ -245,8 +245,11 @@ class LeanServer:
         errors = [d for d in diagnostics if d.get("severity") == 1]
         warnings = [d for d in diagnostics if d.get("severity") == 2]
 
-        # Condition 2: statement present verbatim.
-        statement_present = self._normalize_whitespace(expected_statement) in self._normalize_whitespace(text)
+        # Condition 2: theorem signature preserved (no quiet weakening).
+        # We compare signatures (theorem name + statement up to `:=`),
+        # ignoring the proof body which legitimately differs between
+        # spec (`by sorry`) and proof (`by <real proof>`).
+        statement_present = self._theorem_signature_present(text, expected_statement)
 
         # Condition 3: no sorry / admit / native_decide.
         no_sorry = not re.search(r"\bsorry\b", text)
@@ -288,6 +291,27 @@ class LeanServer:
             elapsed_seconds=elapsed,
             rejection_reason=reason,
         )
+
+
+    @staticmethod
+    def _extract_theorem_signature(src: str) -> str | None:
+        """Return the theorem signature string from `theorem NAME ... :` up
+        to (but not including) `:=`. None if no theorem declaration found."""
+        # Find the first `theorem <name>` followed by either ` :=` or `:=`
+        m = re.search(r"theorem\s+\w+[^:=]*?:[\s\S]*?(?=:=)", src)
+        if not m:
+            return None
+        sig = m.group(0).strip()
+        return sig
+
+    @staticmethod
+    def _theorem_signature_present(proof_text: str, expected_spec_text: str) -> bool:
+        """True iff both sources declare the same theorem signature."""
+        proof_sig = LeanServer._extract_theorem_signature(proof_text)
+        spec_sig  = LeanServer._extract_theorem_signature(expected_spec_text)
+        if proof_sig is None or spec_sig is None:
+            return False
+        return LeanServer._normalize_whitespace(proof_sig) == LeanServer._normalize_whitespace(spec_sig)
 
     @staticmethod
     def _normalize_whitespace(s: str) -> str:

@@ -1,0 +1,57 @@
+{
+  "version": "0.1-bench-5",
+  "frozen_at": "2026-05-26",
+  "description": "5-contract representative subset of v0.1 corpus for initial benchmark run. Full 100-contract run scheduled for v0.2.",
+  "contracts": [
+    {
+      "contract_id": "a1_trivial_constant_balance",
+      "source_path": "corpus/contracts/a1_trivial_constant_balance/source.sol",
+      "purpose": "Minimal contract that holds a constant value; trivially satisfies A1.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=trivially_safe"
+    },
+    {
+      "contract_id": "a2_owner_only_setter",
+      "source_path": "corpus/contracts/a2_owner_only_setter/source.sol",
+      "purpose": "Setter restricted to owner; trivially A2-safe.",
+      "expected_obligations": [
+        "A2"
+      ],
+      "provenance": "synthesized for PARALLAX-5 AI-FV benchmark v0.1 (aquaursa/parallax5-aifv-copilot)",
+      "notes": "Tier A-synthetic, role=hardened"
+    },
+    {
+      "contract_id": "cream_hardened",
+      "source_path": "corpus/contracts/cream_hardened/source.sol",
+      "purpose": "Cream-Harvest archetype: hardened share accounting",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/parallax/formal/halmos/CreamHardened.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "vault_patched_4626",
+      "source_path": "corpus/contracts/vault_patched_4626/source.sol",
+      "purpose": "ERC-4626 vault with virtual-shares mitigation",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "github.com/aquaursa/parallax-5 (v1.0.1, commit e9ac9f27); path: lean-substrate/demos/vault/contracts/PatchedVault.sol",
+      "notes": "Tier B-substrate, role=hardened"
+    },
+    {
+      "contract_id": "harvest_share_price_first_dep",
+      "source_path": "corpus/contracts/harvest_share_price_first_dep/source.sol",
+      "purpose": "Harvest archetype: first depositor mints arbitrary shares.",
+      "expected_obligations": [
+        "A1"
+      ],
+      "provenance": "minimal archetype reproduction for PARALLAX-5 catalog (paper \u00a710)",
+      "notes": "Tier C-catalog, role=vulnerable"
+    }
+  ]
+}
