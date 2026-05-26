@@ -1,0 +1,3 @@
+[submodule "lean-substrate"]
+	path = lean-substrate
+	url = https://github.com/aquaursa/parallax-5

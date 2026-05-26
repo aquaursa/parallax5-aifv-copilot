@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use the PARALLAX-5 AI-FV Co-Pilot in academic work, please cite both this software and the underlying substrate."
+type: software
+title: "PARALLAX-5 AI-FV Co-Pilot: LLM-Drafted, Kernel-Verified Smart-Contract Proofs"
+abstract: >-
+  An AI-assisted formal-verification co-pilot specialized to the PARALLAX-5
+  five-obligation substrate for smart-contract security. Four frontier
+  language models (Claude, GPT, Deepseek, Mistral Leanstral) draft
+  obligation-typed Lean 4 specifications and proofs for Solidity
+  contracts; the Lean kernel decides which drafts are accepted. The
+  co-pilot does not create trust; it accelerates property authoring
+  and proof drafting whose outputs admit kernel verification.
+authors:
+  - name: "AquaUrsa Research"
+    website: "https://aquaursa.io"
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/aquaursa/parallax5-aifv-copilot"
+keywords:
+  - formal verification
+  - Lean 4
+  - AI-assisted theorem proving
+  - smart contract security
+  - PARALLAX-5
+  - large language models
+references:
+  - type: software
+    title: "PARALLAX-5: A Five-Obligation Substrate for Smart Contracts and AI Agents"
+    doi: 10.5281/zenodo.20402755
+    notes: "Underlying substrate. The co-pilot extends PARALLAX-5 from abstract-layer mechanization to per-contract certification."
